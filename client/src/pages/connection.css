@@ -1,0 +1,233 @@
+/* ===========================================
+   DATABASE CONNECTION FORM STYLES
+   =========================================== */
+
+/* Main container for the connection page */
+.connection {
+    /* Center the form on the page */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    
+    /* Background styling */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 2rem;
+    
+    /* Font settings */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Form container styling */
+.connection form {
+    /* Form size and spacing */
+    background: white;
+    padding: 3rem;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 500px;
+    
+    /* Shadow effect for depth */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    
+    /* Smooth animations */
+    transition: transform 0.3s ease;
+}
+
+/* Form hover effect */
+.connection form:hover {
+    transform: translateY(-5px);
+}
+
+/* Main heading styling */
+.connection h1 {
+    /* Text styling */
+    color: #1e293b;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: center;
+    
+    /* Spacing */
+    margin-bottom: 2.5rem;
+    
+    /* Letter spacing for better readability */
+    letter-spacing: 0.5px;
+}
+
+/* Each form input group container */
+.form-group-connection {
+    /* Spacing between form groups */
+    margin-bottom: 1.5rem;
+}
+
+/* Label styling for all form inputs */
+.form-group-connection label {
+    /* Text appearance */
+    display: block;
+    color: #374151;
+    font-weight: 600;
+    font-size: 0.9rem;
+    
+    /* Spacing */
+    margin-bottom: 0.5rem;
+    
+    /* Text transformation */
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Input field styling */
+.form-group-connection input {
+    /* Size and spacing */
+    width: 100%;
+    padding: 0.75rem 1rem;
+    
+    /* Border and background */
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    background-color: #f9fafb;
+    
+    /* Text styling */
+    font-size: 1rem;
+    color: #374151;
+    
+    /* Remove default outline */
+    outline: none;
+    
+    /* Smooth transitions */
+    transition: all 0.3s ease;
+    
+    /* Box sizing to include padding in width */
+    box-sizing: border-box;
+}
+
+/* Input field focus state (when user clicks/tabs into input) */
+.form-group-connection input:focus {
+    /* Change border color when focused */
+    border-color: #2563eb;
+    
+    /* Add subtle glow effect */
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    
+    /* Change background to pure white */
+    background-color: white;
+}
+
+/* Input field hover state */
+.form-group-connection input:hover {
+    /* Lighten border on hover */
+    border-color: #d1d5db;
+    
+    /* Change background slightly */
+    background-color: white;
+}
+
+/* Primary button styling (Connect button) */
+.primary-button {
+    /* Size and spacing */
+    width: 100%;
+    padding: 1rem;
+    
+    /* Background and text */
+    background: #2563eb;
+    color: white;
+    
+    /* Remove default button styling */
+    border: none;
+    border-radius: 8px;
+    
+    /* Text styling */
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    
+    /* Cursor and transitions */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    
+    /* Spacing from form inputs */
+    margin-top: 1rem;
+}
+
+/* Button hover effect */
+.primary-button:hover {
+    /* Darker blue on hover */
+    background: #1d4ed8;
+    
+    /* Slight lift effect */
+    transform: translateY(-2px);
+    
+    /* Enhanced shadow */
+    box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3);
+}
+
+/* Button active state (when being clicked) */
+.primary-button:active {
+    /* Slightly pressed down effect */
+    transform: translateY(0);
+    
+    /* Reduce shadow when pressed */
+    box-shadow: 0 5px 10px rgba(37, 99, 235, 0.2);
+}
+
+/* Button focus state (for keyboard navigation) */
+.primary-button:focus {
+    /* Remove default outline */
+    outline: none;
+    
+    /* Add custom focus ring */
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.3);
+}
+
+/* ===========================================
+   RESPONSIVE DESIGN FOR MOBILE DEVICES
+   =========================================== */
+
+/* Tablet and smaller screens */
+@media (max-width: 768px) {
+    .connection {
+        /* Reduce padding on smaller screens */
+        padding: 1rem;
+    }
+    
+    .connection form {
+        /* Reduce form padding */
+        padding: 2rem;
+    }
+    
+    .connection h1 {
+        /* Smaller heading on mobile */
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+    }
+    
+    .form-group-connection {
+        /* Reduce spacing between inputs */
+        margin-bottom: 1.2rem;
+    }
+    
+    .form-group-connection input {
+        /* Slightly smaller input padding */
+        padding: 0.6rem 0.8rem;
+    }
+}
+
+/* Very small mobile screens */
+@media (max-width: 480px) {
+    .connection form {
+        /* Even less padding for very small screens */
+        padding: 1.5rem;
+    }
+    
+    .connection h1 {
+        /* Smaller heading */
+        font-size: 1.3rem;
+    }
+    
+    .primary-button {
+        /* Slightly smaller button padding */
+        padding: 0.8rem;
+        font-size: 1rem;
+    }
+}
