@@ -1,6 +1,5 @@
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import Landing from './pages/Landing.';
-import Landing from './pages/Landing.';
 import Connection from './pages/connection';
 import Main from './pages/main';
 
