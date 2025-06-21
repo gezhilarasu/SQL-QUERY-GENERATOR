@@ -6,7 +6,10 @@ from routes.test_connection import test_connection
 import os
 
 app = Flask(__name__)
-CORS(app)
+from flask_cors import CORS
+
+CORS(app, resources={r"/*": {"origins": "https://querycraft-sql.vercel.app"}})
+
 
 app.register_blueprint(test_connection)
 
