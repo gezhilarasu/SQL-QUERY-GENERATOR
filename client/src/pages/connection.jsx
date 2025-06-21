@@ -22,7 +22,7 @@ function Connection() {
         };
 
         try {
-            const res = await fetch('http://localhost:5000/test-connection', {
+            const res = await fetch('https://sql-query-generator-3513.onrender.com/test-connection', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
