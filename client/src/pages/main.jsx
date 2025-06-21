@@ -15,7 +15,7 @@ function Main() {
         setQuestion('');
 
         try {
-            const res = await axios.post("http://localhost:5000/ask", { question: currentQuestion });
+            const res = await axios.post("https://sql-query-generator-3513.onrender.com/ask", { question: currentQuestion });
             
             const newConversation = {
                 id: Date.now(),
