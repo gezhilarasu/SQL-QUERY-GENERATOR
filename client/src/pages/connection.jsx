@@ -35,7 +35,7 @@ function Connection() {
             if (res.ok) {
                 // Save connection info in local storage (optional)
                 alert('Database connection successful');
-                localStorage.setItem('db_config', JSON.stringify(connectionDetails));
+                sessionStorage.setItem('db_config', JSON.stringify(connectionDetails)); // store in sessionStorage
                 navigate('/main');
             } else {
                 alert('Database connection failed: ' + data.error);
