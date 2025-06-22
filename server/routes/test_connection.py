@@ -8,7 +8,6 @@ test_connection = Blueprint("test_connection", __name__)
 @test_connection.route("/test-connection", methods=["POST"])
 def test_db_connection():
     data = request.get_json()
-    
     if not data:
         return jsonify({"error": "No JSON data provided"}), 400
     
@@ -32,10 +31,7 @@ def test_db_connection():
         conn = mysql.connector.connect(**connection_config)
         conn.close()
 
-        # ✅ Store in app global config
-        current_app.config["DB_CONFIG"] = connection_config
-
-        return jsonify({"message": "Connected successfully and config stored"}), 200
+        return jsonify({"message": "Connected successfully"}), 200
     except mysql.connector.Error as db_error:
         return jsonify({"error": f"Database connection error: {str(db_error)}"}), 400
     except ValueError as ve:

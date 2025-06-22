@@ -15,21 +15,20 @@ app.register_blueprint(test_connection)
 
 @app.route("/ask", methods=["POST"])
 def ask():
-    db_config = app.config.get("DB_CONFIG")
-    if not db_config:
-        return jsonify({"error": "No DB config found. Please connect first."}), 400
-
-    print("Before receiving")
     data = request.get_json()
     print("Request JSON:", data)
 
+    db_config = data.get("db_config")
     question = data.get("question")
+
+    if not db_config:
+        return jsonify({"error": "Database configuration missing in request."}), 400
     if not question:
         return jsonify({"error": "No question provided"}), 400
 
     print("Received question:", question)
-    print("DB Config type:", type(db_config))
-    print("DB Config content:", db_config)
+    print("DB Config:", db_config)
+
     return handle_query(db_config, question)
 
 

@@ -13,9 +13,16 @@ function Main() {
         setLoading(true);
         const currentQuestion = question;
         setQuestion('');
+        const dbConfig = JSON.parse(sessionStorage.getItem('db_config'));
+        if (!dbConfig) {
+        alert('Database configuration not found. Please reconnect.');
+        setLoading(false);
+        return;
+    }
+
 
         try {
-            const res = await axios.post("https://sql-query-generator-3513.onrender.com/ask", { question: currentQuestion });
+            const res = await axios.post("https://sql-query-generator-3513.onrender.com/ask", { question: currentQuestion,db_config: dbConfig });
             
             const newConversation = {
                 id: Date.now(),
